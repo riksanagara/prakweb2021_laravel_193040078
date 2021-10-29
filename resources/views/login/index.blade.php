@@ -3,7 +3,12 @@
 @section('container')
 <div class="row justify-content-center">
     <div class="col-md-4">
-
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @if (session()->has('success'))
+            {{ session('success') }}
+        @endif
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
         <main class="form-signin">
             <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
             <form>
